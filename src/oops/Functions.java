@@ -7,6 +7,18 @@ import java.util.concurrent.TimeUnit;
 
 public class Functions {
 
+    public static boolean checkAutomorphic(final int n) {
+	// time complexity - O(log N)
+	boolean isAutomorphic = false;
+	int square = n * n;
+	int lenght = String.valueOf(n).length();
+	if (String.valueOf(square).substring(String.valueOf(square).length() - lenght)
+		.compareTo(String.valueOf(n)) == 0) {
+	    isAutomorphic = true;
+	}
+	return isAutomorphic;
+    }
+
     /**
      * @param value
      * @return
@@ -32,11 +44,21 @@ public class Functions {
      * @return
      */
     public static int reverseNumber(int num) {
+	// time complexity of O(log num)
+	boolean negativeSign = false;
+	if (num < 0) {
+	    num = Math.abs(num);
+	    negativeSign = true;
+	}
+
 	int number = 0;
 	while (num > 0) {
 	    int rem = num % 10;
 	    number = number * 10 + rem;
 	    num = num / 10;
+	}
+	if (negativeSign) {
+	    number = number * -1;
 	}
 	return number;
     }
