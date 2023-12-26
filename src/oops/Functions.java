@@ -7,6 +7,36 @@ import java.util.concurrent.TimeUnit;
 
 public class Functions {
 
+    public static boolean krishNumber(final int number) {
+	boolean isKrishNumber = true;
+
+	int sum = 0;
+	int num = number;
+	while (num > 0) {
+	    sum = sum + factorial(num % 10);
+	    num = num / 10;
+	}
+	if (sum == number) {
+	    isKrishNumber = false;
+	}
+	return isKrishNumber;
+
+    }
+
+    /**
+     * @param n
+     * @return
+     */
+    public static boolean checkSunnyNumber(final int n) {
+	boolean isSunny = false;
+	System.out.println(Math.sqrt(n + 1) % 1);
+	if (Math.sqrt(n + 1) % 1 == 0) {
+	    isSunny = true;
+	}
+
+	return isSunny;
+    }
+
     public static boolean checkAutomorphic(final int n) {
 	// time complexity - O(log N)
 	boolean isAutomorphic = false;

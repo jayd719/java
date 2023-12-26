@@ -22,6 +22,16 @@ public class Main {
 	System.out.println(String.format("6 AutoMorphic: %b", Functions.checkAutomorphic(6)));
 	System.out.println(String.format("10 AutoMorphic: %b\n", Functions.checkAutomorphic(10)));
 
+//	ArrayList<Integer> list = new ArrayList<>();
+//	int k = 0;
+//	while (k < 10) {
+//	    list.add(k);
+//	    ++k;
+//	}
+//	System.out.println(Algorithms.binarySearch(list, 1));
+	System.out.println(Functions.checkSunnyNumber(15));
+	System.out.println(Functions.krishNumber(145));
+
     }
 
 }
