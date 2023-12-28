@@ -39,6 +39,8 @@ public class Demo1 {
 
 	Collections.sort(listOne, (a, b) -> (getSum(a) - getSum(b)));
 
+	System.out.println(2 * 0);
+
     }
 
 }
